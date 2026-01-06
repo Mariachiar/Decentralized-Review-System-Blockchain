@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negozio - Sito E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1>Negozio E-commerce</h1>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </header>
+
+        <div class="section status-section">
+            <h2>Stato Utente</h2>
+            <p><strong>DID Utente Attivo:</strong> <span id="userDID">Caricamento...</span></p>
+            <div class="user-credentials">
+                <h3>Le tue Credenziali Attive</h3>
+                <pre id="userCredentialsDisplay">Caricamento...</pre>
+            </div>
+            <div class="update-vp-section">
+                <h4>Aggiorna le tue Credenziali</h4>
+                <div class="form-group">
+                    <label for="updateVpFileInput">Seleziona un nuovo file VP (.jwt) per aggiornare:</label>
+                    <input type="file" id="updateVpFileInput" accept=".jwt, .txt">
+                </div>
+                <button id="updateVpBtn">Aggiorna VP</button>
+                <div id="updateStatus" class="status"></div>
+            </div>
+        </div>
+
+        <div class="section products-section">
+            <h2>Prodotti Disponibili</h2>
+            <div id="productsList" class="product-grid"></div>
+            <div id="buyStatus" class="status"></div>
+        </div>
+        
+        <div id="proofContainer" class="section proof-section" style="display:none;">
+             <h2>Prova d'Acquisto (VC)</h2>
+             <p>Questa è la tua credenziale che attesta i tuoi acquisti. Puoi presentarla ad altri servizi.</p>
+             <pre id="proofVcDisplay"></pre>
+        </div>
+
+        <div class="section user-products-section">
+            <h2>I Miei Prodotti Acquistati</h2>
+            <button id="viewMyProductsBtn">Aggiorna la mia lista prodotti</button>
+            <ul id="myProductsList"></ul>
+            <div id="returnStatus" class="status"></div>
+        </div>
+
+        <div class="section user-nfts-section">
+            <h2>I Miei NFT</h2>
+            <button id="viewMyNFTsBtn">Aggiorna la mia lista NFT</button>
+            <ul id="myNFTsList">
+                </ul>
+            <div id="nftStatus" class="status"></div>
+        </div>
+    </div>
+    
+    <template id="product-card-template">
+        <div class="product-item">
+            <h3 class="product-id"></h3>
+            <p><strong>Vincoli:</strong> <span class="product-constraints"></span></p>
+            <div class="product-actions">
+                <button class="buy-btn">Compra</button>
+                <a class="btn-review" target="_blank">Vedi Recensioni</a>
+            </div>
+        </div>
+    </template>
+
+    <script src="shop-ui.js"></script>
+</body>
+</html>

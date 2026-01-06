@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #2980b9; --secondary-color: #3498db; --background-color: #ecf0f1;
+    --surface-color: #ffffff; --text-color: #2c3e50; --border-color: #bdc3c7;
+    --error-color: #c0392b; --success-color: #27ae60;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; background-color: var(--background-color); color: var(--text-color); line-height: 1.6;
+}
+.container { max-width: 900px; margin: 2rem auto; padding: 1rem; }
+.main-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.main-header h1 { margin: 0; }
+.logout-btn { background-color: var(--error-color) !important; }
+.logout-btn:hover { background-color: #a93226 !important; }
+a.btn-back {
+    background-color: #7f8c8d !important; text-decoration: none; padding: 0.5rem 1rem;
+    color: white; border-radius: 4px; font-weight: 600; font-size: 0.9rem;
+}
+a.btn-back:hover { background-color: #626567 !important; }
+h1, h2, h3, h4 { color: var(--primary-color); margin-bottom: 1rem; }
+h1 { text-align: center; }
+.section {
+    background-color: var(--surface-color); padding: 1.5rem; margin-bottom: 1.5rem;
+    border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.form-group { margin-bottom: 1rem; }
+label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+input[type="text"], input[type="file"] {
+    width: 100%; padding: 0.75rem; border: 1px solid var(--border-color);
+    border-radius: 4px; font-size: 1rem; box-sizing: border-box;
+}
+button, a.btn-review {
+    background-color: var(--secondary-color); color: white; border: none; padding: 0.75rem 1.5rem;
+    border-radius: 4px; cursor: pointer; font-size: 1rem; font-weight: 600;
+    margin-right: 0.5rem; margin-top: 0.5rem; transition: background-color 0.2s ease;
+    text-decoration: none; display: inline-block; text-align: center;
+}
+a.btn-review {
+    background-color: #16a085; font-size: 0.8rem; padding: 0.4rem 0.8rem;
+}
+a.btn-review:hover { background-color: #117a65; }
+button:hover { background-color: var(--primary-color); }
+button:disabled { background-color: var(--border-color); cursor: not-allowed; opacity: 0.7; }
+.status {
+    margin-top: 1rem; padding: 1rem; border-radius: 4px; font-weight: 500; display: none;
+}
+.status.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; display: block; }
+.status.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; display: block; }
+pre {
+    background-color: #ecf0f1; padding: 1rem; border-radius: 4px;
+    white-space: pre-wrap; word-break: break-all; font-size: 0.9em; border: 1px solid #e0e0e0;
+}
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.product-item {
+    border: 1px solid var(--border-color); padding: 1rem; border-radius: 4px;
+    display: flex; flex-direction: column; justify-content: space-between;
+}
+.product-item h3 { margin-top: 0; color: #5D6D7E; }
+.product-item p { font-size: 0.85em; color: #555; }
+.product-actions { margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+ul { list-style-type: none; padding: 0; }
+ul li {
+    background-color: #f9f9f9; border: 1px solid #eee; padding: 10px; margin-bottom: 5px;
+    border-radius: 4px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+}
+.update-vp-section { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #eee; }
+.proof-section h2 { color: var(--success-color); }
+/* Stili per la pagina delle recensioni e per la nuova sezione NFT */
+.review-card, .user-nfts-section {
+    background: #fff; border: 1px solid #eee; border-radius: 8px;
+    margin-bottom: 1.5rem; padding: 1.5rem;
+}
+.review-content { font-size: 1.1em; margin-bottom: 1rem; white-space: pre-wrap; }
+.review-meta {
+    font-size: 0.85em; color: #7f8c8d; border-bottom: 1px dashed #ddd;
+    padding-bottom: 1rem; margin-bottom: 1rem;
+}
+.review-meta p { margin: 0.25rem 0; }
+.review-cid { word-break: break-all; }
+.review-votes p { margin: 0.5rem 0; font-weight: 600; }
+.review-votes span { font-weight: normal; color: #555; }

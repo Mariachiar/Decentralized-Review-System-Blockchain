@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recensioni Prodotto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1>Recensioni per <span id="productId">...</span></h1>
+            <a href="/shop" class="btn-back">Torna al Negozio</a>
+        </header>
+        <div id="reviewsContainer" class="reviews-list">
+            <p>Caricamento recensioni...</p>
+        </div>
+    </div>
+    
+    <template id="review-card-template">
+        <div class="review-card">
+            <div class="review-content">
+                <p class="review-text"></p>
+            </div>
+            <div class="review-meta">
+                <p><strong> Recensione: </strong> <span class="review-plain"></span></p>
+
+                <p><strong>Autore:</strong> <span class="review-author"></span></p>
+                <!-- <p><strong>Data:</strong> <span class="review-timestamp"></span></p> -->
+                <p><strong>Stato:</strong> <span class="review-state"></span></p>
+                
+                <p class="review-cid"><strong>CID:</strong> <span></span></p>
+
+                <p><strong>Reso:</strong> <span class="review-hasReturned"></span></p>
+
+            </div>
+            <div class="review-votes">
+                <p>👍 <span class="review-likes-count"></span> Mi piace (da: <span class="review-likes-list"></span>)</p>
+                <p>👎 <span class="review-dislikes-count"></span> Non mi piace (da: <span class="review-dislikes-list"></span>)</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="product-reviews-ui.js"></script>
+</body>
+</html>

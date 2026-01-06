@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Recensioni</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestione Recensioni Prodotti</h1>
+        <div class="section">
+            <h2>Scegli un'Azione</h2>
+            <div class="form-group">
+                <label for="actionSelector">Azione da eseguire:</label>
+                <select id="actionSelector">
+                    <option value="">-- Seleziona --</option>
+                    <option value="uploadToIpfs">1. Scrivi e Carica Recensione su IPFS</option>
+                    <option value="insertReview">2. Invia Recensione a Blockchain</option>
+                    <option value="modifyReview">3. Modifica Recensione</option>
+                    <option value="deleteReview">4. Cancella Recensione</option>
+                    <option value="addLike">5. Aggiungi 'Mi Piace' a una Recensione</option>
+                    <option value="addDislike">6. Aggiungi 'Non Mi Piace' a una Recensione</option>
+                    <option value="viewReviews">7. Visualizza Recensioni di un Prodotto</option>
+                    <option value="getReviewLikes">8. Visualizza 'Mi Piace' di una Recensione</option>
+                    <option value="getReviewDislikes">9. Visualizza 'Non Mi Piace' di una Recensione</option>
+                    <option value="getHolderReview">10. Visualizza Autore di una Recensione</option>
+                    <option value="getStateReview">11. Visualizza Stato di una Recensione</option>
+                </select>
+            </div>
+        </div>
+        <div id="actionFormContainer" class="section" style="display:none;"></div>
+        <div id="resultsContainer" class="section" style="display:none;">
+            <h2>Risultato</h2>
+            <pre id="resultsOutput"></pre>
+        </div>
+    </div>
+    <script src="reviews-ui.js"></script>
+</body>
+</html>

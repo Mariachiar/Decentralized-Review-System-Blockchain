@@ -1,0 +1,242 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "did",
+        "type": "string"
+      }
+    ],
+    "name": "IsUserRegistered",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "productId",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "nation",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "over18",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "sex",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "weaponPermit",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "student",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "teacher",
+        "type": "bool"
+      }
+    ],
+    "name": "addProduct",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "did",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "productId",
+        "type": "string"
+      }
+    ],
+    "name": "buy",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "productId",
+        "type": "string"
+      }
+    ],
+    "name": "getProductConstraints",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "nation",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "over18",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "sex",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "weaponPermit",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "student",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "teacher",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct WebsiteRegisterContract.Constraints",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "did",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "productId",
+        "type": "string"
+      }
+    ],
+    "name": "getProductReturnStatus",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "did",
+        "type": "string"
+      }
+    ],
+    "name": "getUserProductList",
+    "outputs": [
+      {
+        "internalType": "string[]",
+        "name": "",
+        "type": "string[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "did",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "nation",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "over18",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "sex",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "weaponPermit",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "student",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "teacher",
+        "type": "bool"
+      }
+    ],
+    "name": "login",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "did",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "productId",
+        "type": "string"
+      }
+    ],
+    "name": "returnProduct",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

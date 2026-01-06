@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credenziale Ricevuta</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { display: flex; flex-direction: column; align-items: center; padding: 2rem; }
+        .vc-container { background-color: #fff; padding: 2rem; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%; max-width: 800px; margin-top: 1rem; word-break: break-all; }
+        .vc-section { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
+        .vc-section:last-child { border-bottom: none; margin-bottom: 0; }
+        .vc-section h2 { font-size: 1.25rem; font-weight: 600; color: #3730a3; margin-bottom: 0.75rem; }
+        pre { background-color: #f9fafb; padding: 1rem; border-radius: 0.375rem; overflow-x: auto; font-size: 0.875rem; color: #1f2937; }
+        .jwt-part { color: #c026d3; } .jwt-dot { color: #64748b; }
+        a.btn, button.btn { display: inline-block; margin-top: 1.5rem; padding: 0.625rem 1.25rem; background-color: #4f46e5; color: white; text-decoration: none; border-radius: 0.375rem; transition: background-color 0.2s; border: none; font-size: 0.9375rem; cursor: pointer; text-align: center; }
+        a.btn:hover, button.btn:hover { background-color: #3730a3; }
+        .button-group { margin-top: 1rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;}
+        .info-message-box { margin-bottom: 1.5rem; padding: 1rem; border-radius: 0.375rem; font-size: 0.9rem; line-height: 1.4; }
+        .update-notification { background-color: #dbeafe; border-left: 4px solid #2563eb; color: #1e40af; } /* Blu per update */
+        .conflict-notification { background-color: #fee2e2; border-left: 4px solid #dc2626; color: #991b1b; } /* Rosso per conflitto */
+        .verification-info { margin-top:1.5rem; padding: 1rem; background-color: #eef2ff; border-left: 4px solid #4f46e5; color: #374151; font-size: 0.9rem;}
+        .verification-info p { margin-bottom: 0.5rem;}
+        .verification-info code { background-color: #e5e7eb; padding: 0.125rem 0.25rem; border-radius: 0.25rem; font-family: monospace;}
+    </style>
+</head>
+<body class="animated-gradient-background">
+    <div class="w-full max-w-lg text-center">
+         <h1 class="text-3xl font-bold text-gray-700 mb-2">La Tua Verifiable Credential</h1>
+    </div>
+
+    <div id="statusNotificationMessage" class="vc-container info-message-box" style="display:none;">
+        </div>
+
+    <div id="vcDisplay" class="vc-container">
+        <p>Recupero della credenziale...</p>
+    </div>
+
+    <div class="button-group">
+        <button type="button" id="downloadVcBtn" class="btn" style="display:none;">Scarica VC (JWT)</button>
+        <a href="/richiesta_VC.html" class="btn">Richiedi un'altra VC</a>
+    </div>
+
+    <div id="verificationSection" class="vc-container verification-info" style="display:none;">
+        <h2>Verifica della Credenziale</h2>
+        <p>Questa Verifiable Credential (VC) è in formato JWT (JSON Web Token) e può essere verificata utilizzando librerie standard.</p>
+        <p>Ad esempio, con la libreria <code>did-jwt-vc</code> in JavaScript, puoi usare la funzione <code>verifyCredential(vcJwt, didResolver)</code>.</p>
+        <p>Per la verifica è necessario un DID Resolver configurato (come quello usato dall'emittente SPID) per risolvere il DID dell'issuer e validare la firma. I dati contenuti nel payload possono essere letti decodificando la seconda parte del JWT (Base64Url Decode).</p>
+    </div>
+
+    <script src="holder.js"></script>
+</body>
+</html>

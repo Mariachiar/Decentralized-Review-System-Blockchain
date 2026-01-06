@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sito E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login al Sito E-commerce</h1>
+        <div class="section login-section">
+            <h2>Accedi con le tue Credenziali</h2>
+            <p>Seleziona la tua Verifiable Presentation (VP) o accedi come ospite.</p>
+            
+            <div class="form-group">
+                <label for="vpFileInput">Seleziona file Verifiable Presentation (.jwt o .txt):</label>
+                <input type="file" id="vpFileInput" accept=".jwt, .txt">
+            </div>
+
+            <button id="loginWithVpBtn">Login con VP</button>
+            <button id="guestLoginBtn">Accedi come Ospite</button>
+            
+            <div id="loginStatus" class="status"></div>
+        </div>
+    </div>
+    <script src="login-ui.js"></script>
+</body>
+</html>

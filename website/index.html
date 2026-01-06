@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sito E-commerce con VC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sito E-commerce con Credenziali Verificabili</h1>
+
+        <div class="section status-section">
+            <h2>Stato Connessione</h2>
+            <button id="connectWalletBtn">Connetti Wallet</button>
+            <p><strong>Account Corrente:</strong> <span id="userAccount">Non connesso</span></p>
+            <p><strong>DID Utente Attivo:</strong> <span id="userDID">N/A</span></p>
+        </div>
+
+        <div class="section login-section">
+            <h2>1. Login Utente</h2>
+            <p>Seleziona una Verifiable Presentation (VP) in formato JWT per effettuare il login e registrare le tue credenziali on-chain. Oppure, accedi come ospite.</p>
+            
+            <div class="form-group">
+                <label for="vpFileInput">Seleziona file VP (.jwt):</label>
+                <input type="text" id="vpFilePathInput" placeholder="Es. credentials/VP/vp_credential.jwt" value="credentials/VP/vp_credential.jwt">
+            </div>
+
+            <button id="loginWithVpBtn">Login con VP</button>
+            <button id="guestLoginBtn">Accedi come Ospite</button>
+            
+            <div id="loginStatus" class="status"></div>
+
+            <div class="user-credentials">
+                <h3>Credenziali Attuali (estratte da VP)</h3>
+                <pre id="userCredentialsDisplay">Effettua il login per visualizzare le credenziali.</pre>
+            </div>
+        </div>
+
+        <div class="section products-section">
+            <h2>2. Prodotti Disponibili</h2>
+            <div id="productsList" class="product-grid">
+                </div>
+            <div id="buyStatus" class="status"></div>
+        </div>
+
+        <div class="section user-products-section">
+            <h2>3. I Miei Prodotti Acquistati</h2>
+            <button id="viewMyProductsBtn">Aggiorna la mia lista prodotti</button>
+            <ul id="myProductsList">
+                </ul>
+            <div id="returnStatus" class="status"></div>
+        </div>
+    </div>
+
+    <script src="../src/WebsiteRegister.js"></script> 
+    <script src="ui-handler.js"></script>
+
+</body>
+</html>
